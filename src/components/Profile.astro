@@ -1,0 +1,90 @@
+---
+import Copy from "../icons/Copy.astro";
+import Email from "../icons/Email.astro";
+import Github from "../icons/Github.astro";
+import Linkedin from "../icons/Linkedin.astro";
+import Location from "../icons/Location.astro";
+import PDF from "../icons/PDF.astro";
+---
+
+<div class="flex flex-col sm:flex-row justify-start items-center gap-4 w-full mb-12">
+  <span class="inline-flex items-center justify-center">
+    <img
+      src="./images/yo.jpeg"
+      alt="Mirko A. Valencia"
+      class="rounded-full object-cover w-24 h-24 sm:w-32 sm:h-32 border-2 border-green-500"
+    />
+  </span>
+  <div class="flex flex-col items-start w-full sm:w-auto">
+    <h1 class="text-4xl  font-bold mt-4">Mirko A. Valencia</h1>
+    <h2 class="text-lg sm:text-xl mt-2 text-green-500">
+      Analista Programador <span class="text-gray-100">|</span> Desarrollador Web Frontend
+    </h2>
+    <div class="flex flex-col sm:flex-row justufy-between sm:items-center gap-6 sm:gap-24 mt-4">
+      <span class="flex items-center gap-1">
+        <Location class="h-5 w-5 sm:h-6 sm:w-6" /> Chile, Coquimbo
+      </span>
+      <div class="flex items-center mt-2 sm:mt-0">
+        <ul class="example-1 flex flex-wrap">
+          <li class="icon-content border-2 border-neutral-700 rounded-full">
+            <a class="link" data-social="email" aria-label="Email" href="mailto:mirkovalencia90@gmail.com">
+              <Email class="h-5 w-5 sm:h-6 sm:w-6" />
+            </a>
+            <div class="tooltip flex gap-2">
+              mirkovalencia90@gmail.com
+              <button class="copy-btn" data-email="mirkovalencia90@gmail.com" aria-label="Copiar Email">
+                <Copy class="h-4 w-4" />
+              </button>
+            </div>
+          </li>
+          <li class="icon-content border-2 border-neutral-700 rounded-full">
+            <a class="link" data-social="linkedin" aria-label="Linkedin" href="https://www.linkedin.com/in/mirko-valencia-92a811205/">
+              <Linkedin class="h-5 w-5 sm:h-6 sm:w-6" />
+            </a>
+            <div class="tooltip">Linkedin</div>
+          </li>
+          <li class="icon-content border-2 border-neutral-700 rounded-full">
+            <a class="link" data-social="github" aria-label="Github" href="https://github.com/MMirkonsio">
+              <Github class="h-5 w-5 sm:h-6 sm:w-6" />
+            </a>
+            <div class="tooltip">Github</div>
+          </li>
+          <li class="icon-content border-2 border-neutral-700 rounded-full">
+            <a class="link" data-social="pdf" aria-label="PDF" href="https://drive.google.com/file/d/1TLPbwQh4BxGUkjL660KSYP-GDKgZUOXo/view?usp=sharing">
+              <PDF class="h-5 w-5 sm:h-6 sm:w-6" />
+            </a>
+            <div class="tooltip">Curriculum</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Contenedor de la alerta personalizada -->
+<div id="custom-alert" class="custom-alert hidden">
+  <span id="alert-message" class="font-bold"></span>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const alertContainer = document.getElementById("custom-alert");
+    const alertMessage = document.getElementById("alert-message");
+
+    document.querySelectorAll(".copy-btn").forEach((button) => {
+      button.addEventListener("click", (event) => {
+        event.stopPropagation();
+        const email = button.getAttribute("data-email");
+        if (alertContainer !== null && alertMessage !== null) {
+          alertMessage.textContent = "Correo copiado";
+          alertContainer.classList.remove("hidden");
+          setTimeout(() => {
+            if (alertContainer !== null) {
+              alertContainer.classList.add("hidden");
+            }
+          }, 3000); // Ocultar alerta después de 3 segundos
+        }
+      });
+    });
+  });
+</script>
