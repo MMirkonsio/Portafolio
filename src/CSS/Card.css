@@ -1,20 +1,32 @@
 ul {
   list-style: none;
-}
-
-.example-1 {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  gap: 10px;
 }
 
-.example-1 .icon-content {
-  margin: 5px 10px;
+.icon-content {
   position: relative;
 }
 
-.example-1 .icon-content .tooltip {
+.icon-btn {
+  display: flex;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+.icon-btn:hover {
+  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+  color: #b1b1b1;
+}
+
+
+
+.tooltip {
   position: absolute;
   top: -30px;
   left: 50%;
@@ -27,51 +39,12 @@ ul {
   visibility: hidden;
   font-size: 14px;
   transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
 }
 
-.example-1 .icon-content:hover .tooltip {
+.icon-content:hover .tooltip {
   opacity: 1;
   visibility: visible;
   top: -50px;
-}
-
-.example-1 .icon-content .link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  color: #ffffff;
-  background-color: #1b1b1b; 
-  transition: all 0.3s ease-in-out;
-}
-
-.example-1 .icon-content .link:hover {
-  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
-}
-
-.example-1 .icon-content .link svg {
-  width: 20px;
-  height: 20px;
-}
-
-.example-1 .icon-content .link[data-social="email"]:hover {
-  color: #7e7e7e;
-}
-
-.example-1 .icon-content .link[data-social="linkedin"]:hover {
-  color: #0077b5;
-}
-
-.example-1 .icon-content .link[data-social="github"]:hover {
-  color: #000000;
-}
-
-.example-1 .icon-content .link[data-social="pdf"]:hover {
-  color: #e31b23;
 }
 
 /* Estilos para la alerta personalizada */
@@ -94,13 +67,3 @@ ul {
 .custom-alert.hidden {
   display: none;
 }
-
-.custom-alert button {
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-
