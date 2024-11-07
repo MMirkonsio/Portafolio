@@ -3,55 +3,173 @@ import React from "../icons/React.astro";
 import Tailwind from "../icons/Tailwind.astro";
 import Express from "../icons/Express.astro";
 import Postgresql from "../icons/Postgresql.astro";
+import Website from "../icons/Website.astro";
 import "../CSS/Card.css";
+import Github from "../icons/Github.astro";
 ---
 
-
 <div class="mt-8">
-    <h3 class="text-3xl font-bold">Proyectos Personales</h3>
-    <div class="mt-4">
-      <div class="flex flex-col items-center gap-8">
-        <div class="relative w-full overflow-hidden rounded-xl border border-green-800 p-[1px] backdrop-blur-3xl">
-          <span class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#A7F3D0_0%,#065F46_50%,#A7F3D0_100%)]"></span>
-          <div class="relative flex flex-col h-full w-full rounded-xl bg-neutral-900 p-4 text-sm font-medium text-gray-50 backdrop-blur-3xl">
-            <div class="flex flex-col justify-between leading-normal max-w-lg">
-              <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">
-                Rincon Tocopillano
-              </h5>
-              <p class="mb-3 font-normal text-gray-400">
-                El objetivo de esta página web es crear una plataforma en línea inclusiva y accesible para la comunidad de Tocopilla, un foro comercial que permita a usuarios individuales y PYMES vender sus productos de manera eficiente y segura.
-              </p>
-              <ul class="flex flex-row flex-wrap mb-2 gap-2">
-                <li>
-                  <span class="flex items-center gap-x-2 rounded-full text-xs border border-gray-100 border-opacity-20 text-white py-1 px-2">
-                    <React class="h-6 w-6" />ReactJS
+  <h3 class="text-3xl font-bold">Proyectos Personales</h3>
+  <div class="mt-4">
+    <div class="flex flex-col items-center gap-8">
+      {/*PRIMER CARD*/}
+      <div
+        class="relative w-full overflow-hidden rounded-xl border border-green-800 p-[1px] backdrop-blur-3xl"
+      >
+        <span
+          class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#A7F3D0_0%,#065F46_50%,#A7F3D0_100%)]"
+        ></span>
+        <div
+          class="relative flex flex-col h-full w-full rounded-xl bg-neutral-900 p-4 text-sm font-medium text-gray-50 backdrop-blur-3xl"
+        >
+          <div class="flex flex-col justify-between leading-normal">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">
+              Rincon Tocopillano
+            </h5>
+            <p class="mb-3 font-normal text-gray-400">
+              El objetivo de esta página web es crear una plataforma en línea
+              inclusiva y accesible para la comunidad de Tocopilla, un foro
+              comercial que permita a usuarios individuales y PYMES vender sus
+              productos de manera eficiente y segura.
+            </p>
+            <ul class="flex flex-row flex-wrap mb-2 gap-2">
+              <li>
+                <span
+                  class="flex items-center gap-x-2 rounded-full text-xs border border-gray-100 border-opacity-20 text-white py-1 px-2"
+                >
+                  <React class="h-6 w-6" />ReactJS
+                </span>
+              </li>
+              <li>
+                <span
+                  class="flex items-center gap-x-2 rounded-full text-xs border border-gray-100 border-opacity-20 text-white py-1 px-2"
+                >
+                  <Tailwind class="h-6 w-6" />Tailwind
+                </span>
+              </li>
+              <li>
+                <span
+                  class="flex items-center gap-x-2 rounded-full text-xs border border-gray-100 border-opacity-20 text-white py-1 px-2"
+                >
+                  <Express class="h-6 w-6" />Express.js
+                </span>
+              </li>
+              <li>
+                <span
+                  class="flex items-center gap-x-2 rounded-full text-xs border border-gray-100 border-opacity-20 text-white py-1 px-2"
+                >
+                  <Postgresql class="h-6 w-6" />PostgreSQL
+                </span>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/MMirkonsio/RinconTocopillano"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span
+                    class="flex items-center gap-x-2 rounded-full text-xs border border-gray-100 border-opacity-20 text-white py-1 px-2"
+                  >
+                    <Github class="h-6 w-6" />Codigo
                   </span>
-                </li>
-                <li>
-                  <span class="flex items-center gap-x-2 rounded-full text-xs border border-gray-100 border-opacity-20 text-white py-1 px-2">
-                    <Tailwind class="h-6 w-6" />Tailwind
-                  </span>
-                </li>
-                <li>
-                  <span class="flex items-center gap-x-2 rounded-full text-xs border border-gray-100 border-opacity-20 text-white py-1 px-2">
-                    <Express class="h-6 w-6" />Express.js
-                  </span>
-                </li>
-                <li>
-                  <span class="flex items-center gap-x-2 rounded-full text-xs border border-gray-100 border-opacity-20 text-white py-1 px-2">
-                    <Postgresql class="h-6 w-6" />PostgreSQL
-                  </span>
-                </li>
-              </ul>
-            </div>
-            <img
-              class="object-cover rounded-lg h-48 w-full mt-4"
-              src="./images/proyecto1.webp"
-              alt="Proyecto"
-            />
+                </a>
+              </li>
+            </ul>
           </div>
+          <img
+            class="object-cover rounded-lg h-full w-full mt-4"
+            src="./images/proyecto1.webp"
+            alt="Proyecto"
+          />
         </div>
       </div>
-      
+
+      {/*SEGUNDO CARD*/}
+
+      <div
+        class="relative w-full overflow-hidden rounded-xl border border-green-800 p-[1px] backdrop-blur-3xl"
+      >
+        <span
+          class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#A7F3D0_0%,#065F46_50%,#A7F3D0_100%)]"
+        ></span>
+        <div
+          class="relative flex flex-col h-full w-full rounded-xl bg-neutral-900 p-4 text-sm font-medium text-gray-50 backdrop-blur-3xl"
+        >
+          <div class="flex flex-col justify-between leading-normal">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">
+              Software de gestion de niños
+            </h5>
+            <p class="mb-3 font-normal text-gray-400">
+              El objetivo de este software es resolver una problemática en los
+              negocios que ofrecen servicios de juegos inflables. Actualmente,
+              no se lleva un control del tiempo que los niños pasan en los
+              juegos, ya que se les permite jugar durante 15 minutos y luego
+              deben bajar. Para abordar esta situación, se ha desarrollado un
+              sistema de gestión en tiempo real, accesible a través de un
+              administrador. Este sistema permite registrar el nombre del niño y
+              el tiempo de juego pagado. De esta manera, tanto los empleados
+              como los empleadores pueden gestionar el tiempo de manera
+              eficiente desde su teléfono o computadora, facilitando la
+              comunicación entre ellos.
+            </p>
+            <ul class="flex flex-row flex-wrap mb-2 gap-2">
+              <li>
+                <span
+                  class="flex items-center gap-x-2 rounded-full text-xs border border-gray-100 border-opacity-20 text-white py-1 px-2"
+                >
+                  <React class="h-6 w-6" />ReactJS
+                </span>
+              </li>
+              <li>
+                <span
+                  class="flex items-center gap-x-2 rounded-full text-xs border border-gray-100 border-opacity-20 text-white py-1 px-2"
+                >
+                  <Tailwind class="h-6 w-6" />Tailwind
+                </span>
+              </li>
+              <li>
+                <span
+                  class="flex items-center gap-x-2 rounded-full text-xs border border-gray-100 border-opacity-20 text-white py-1 px-2"
+                >
+                  <Express class="h-6 w-6" />Express.js
+                </span>
+              </li>
+              <li>
+                <a
+                  href="https://ramadas2025.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span
+                    class="flex items-center gap-x-2 rounded-full text-xs border border-gray-100 border-opacity-20 text-white py-1 px-2"
+                  >
+                    <Website class="h-6 w-6 bg-white rounded-full" />Web
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/MMirkonsio/Ramadas2025"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span
+                    class="flex items-center gap-x-2 rounded-full text-xs border border-gray-100 border-opacity-20 text-white py-1 px-2"
+                  >
+                    <Github class="h-6 w-6" />Codigo
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <img
+            class="object-cover rounded-lg h-full w-full mt-4"
+            src="./images/proyecto2.webp"
+            alt="Proyecto"
+          />
+        </div>
+      </div>
     </div>
   </div>
+  <hr class="border-green-500 my-8" />
+</div>
