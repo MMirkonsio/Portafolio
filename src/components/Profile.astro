@@ -29,49 +29,56 @@ import PDF from "../icons/PDF.astro";
       <span class="flex items-center gap-1">
         <Location class="h-5 w-5 sm:h-6 sm:w-6" /> Chile, Coquimbo
       </span>
-      <div class="flex items-center mt-2 sm:mt-0">
-        <ul class="example-1 flex flex-wrap gap-4">
+      <div class="flex items-center mt-2 sm:mt-0 ml-6">
+        <ul>
           <li class="icon-content rounded-full overflow-hidden">
             <button
               class="icon-btn copy-btn"
               data-email="mirkovalencia90@gmail.com"
               aria-label="Copiar Email"
+              title="mirkovalencia90@gmail.com"
             >
               <Email class="h-5 w-5 sm:h-6 sm:w-6" />
             </button>
             <div class="tooltip">Email</div>
           </li>
+          
           <li class="icon-content rounded-full overflow-hidden">
-            <button
+            <a
+              href="https://www.linkedin.com/in/mirko-valencia-92a811205/"
               class="icon-btn"
-              data-social="linkedin"
               aria-label="Linkedin"
-              onclick="window.location.href='https://www.linkedin.com/in/mirko-valencia-92a811205/'"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Linkedin class="h-5 w-5 sm:h-6 sm:w-6" />
-            </button>
+            </a>
             <div class="tooltip">Linkedin</div>
           </li>
+          
           <li class="icon-content rounded-full overflow-hidden">
-            <button
+            <a
+              href="https://github.com/MMirkonsio"
               class="icon-btn"
-              data-social="github"
               aria-label="Github"
-              onclick="window.location.href='https://github.com/MMirkonsio'"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Github class="h-5 w-5 sm:h-6 sm:w-6" />
-            </button>
+            </a>
             <div class="tooltip">Github</div>
           </li>
+          
           <li class="icon-content rounded-full overflow-hidden">
-            <button
+            <a
+              href="https://drive.google.com/file/d/13Jl-IUGsvD10lo1Du1BjEnpSaN3fvAyF/view?usp=sharing"
               class="icon-btn"
-              data-social="pdf"
               aria-label="PDF"
-              onclick="window.location.href='https://drive.google.com/file/d/13Jl-IUGsvD10lo1Du1BjEnpSaN3fvAyF/view?usp=sharing'"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <PDF class="h-5 w-5 sm:h-6 sm:w-6" />
-            </button>
+            </a>
             <div class="tooltip">Curriculum</div>
           </li>
         </ul>
